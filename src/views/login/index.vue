@@ -13,7 +13,7 @@
     <el-input v-model="form.code "  placeholder="验证码"></el-input>       
      </el-col>
      <el-col :span="10" :offset="2"> 
-     <el-button round>发送验证码</el-button>       
+     <el-button round @click="handleSendCode">发送验证码</el-button>       
      </el-col>
   </el-form-item>
   <el-form-item>
@@ -24,6 +24,8 @@
   </div>
 </template>
 <script>
+  import axios from 'axios'
+  
 export default {
   name: 'AppLogin',
   data () {
@@ -37,6 +39,11 @@ export default {
     methods: {
       onSubmit() {
         console.log('submit!');
+      },
+      handleSendCode() {
+        axios({
+
+        })
       }
     }
 }
